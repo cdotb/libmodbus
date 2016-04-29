@@ -1218,7 +1218,7 @@ static int _modbus_rtu_select(modbus_t *ctx, fd_set *rset,
             printf("Setting GPIO %d to read mode\n", ctx_rtu->gpio);
         }
 	if (gpio_set_value (ctx_rtu->gpio, 0) && ctx->debug) {
-            fprinf(stderr, "Problem with setting GPIO %d to 0\n", ctx_rtu->gpio);
+            prinf("Problem with setting GPIO %d to 0\n", ctx_rtu->gpio);
         }
     }
 
