@@ -908,9 +908,9 @@ static int _modbus_rtu_connect(modbus_t *ctx)
 #endif
     
     /* use GPIO instead of RTS */
-    if (cts_rtu->gpio >= 0) {
+    if (ctx_rtu->gpio >= 0) {
         gpio_export (ctx_rtu->gpio);
-	gpio_set_dir (ctx_rtu->gpio, 1);'
+	    gpio_set_dir (ctx_rtu->gpio, 1);
     }
     return 0;
 }
