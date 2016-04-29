@@ -275,7 +275,7 @@ static ssize_t _modbus_rtu_send(modbus_t *ctx, const uint8_t *req, int req_lengt
     /* Let the input buffer empty */
     while (read(ctx->s, &c, 1)); // commit patch for use with the beaglebone_cape.
     modbus_rtu_t *ctx_rtu = ctx->backend_data;
-    
+
 #if defined(_WIN32)
     
     DWORD n_bytes = 0;
@@ -288,7 +288,7 @@ static ssize_t _modbus_rtu_send(modbus_t *ctx, const uint8_t *req, int req_lengt
         }
     }
 #if HAVE_DECL_TIOCM_RTS
-    modbus_rtu_t *ctx_rtu = ctx->backend_data;
+    //modbus_rtu_t *ctx_rtu = ctx->backend_data;
     if (ctx_rtu->rts != MODBUS_RTU_RTS_NONE) {
         ssize_t size;
 
