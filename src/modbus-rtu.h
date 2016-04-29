@@ -32,6 +32,9 @@ MODBUS_API int modbus_rtu_get_serial_mode(modbus_t *ctx);
 MODBUS_API int modbus_rtu_set_rts(modbus_t *ctx, int mode);
 MODBUS_API int modbus_rtu_get_rts(modbus_t *ctx);
 
+MODBUS_API int modbus_rtu_set_gpio_rts(modbus_t *ctx, int num);
+MODBUS_API int modbus_rtu_get_gpio_rts(modbus_t *ctx);
+
 MODBUS_API int modbus_rtu_set_custom_rts(modbus_t *ctx, void (*set_rts) (modbus_t *ctx, int on));
 
 MODBUS_API int modbus_rtu_set_rts_delay(modbus_t *ctx, int us);
